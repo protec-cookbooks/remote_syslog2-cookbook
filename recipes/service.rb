@@ -4,6 +4,6 @@ template '/etc/init.d/remote_syslog2' do
 end
 
 service 'remote_syslog2' do
-  supports restart: true, status: true
+  supports restart: true, status: true, start: true, stop: true
   action [:start, :enable]
 end

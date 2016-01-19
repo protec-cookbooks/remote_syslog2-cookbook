@@ -1,14 +1,10 @@
 # Overwrite this in your cookbook
-default['remote_syslog2']['config'] = {
-  files: [],
-  exclude_files: [],
-  exclude_patterns: [],
-  hostname: node['hostname'],
-  destination: {
-    host: 'logs.papertrailapp.com',
-    port: 12345
-  }
-}
+default['remote_syslog2']['config']['files'] = []
+default['remote_syslog2']['config']['exclude_files'] = []
+default['remote_syslog2']['config']['exclude_patterns'] = []
+default['remote_syslog2']['config']['hostname'] = node['hostname']
+default['remote_syslog2']['config']['destination']['host'] = 'logs.papertrailapp.com'
+default['remote_syslog2']['config']['destination']['port'] = 1234
 
 # These attributes probably shouldn't be changed unless they specifically need to be
 default['remote_syslog2']['config_file'] = '/etc/remote_syslog2.yml'
